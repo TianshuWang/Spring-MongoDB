@@ -3,3 +3,12 @@ server:
 mongodb:
     database-name: item
     url: mongodb://localhost:27017/item
+user:
+    oauth:
+        accessTokenValidity: 300
+        clientId: nM1A9sT86JI83Nx2VMUsUcPhCEwa
+        clientSecret: Dem_fQx9VliGFOv935iFyfu2ty4a
+        refreshTokenValidity: 240000
+        user:
+            password: password
+            username: username
