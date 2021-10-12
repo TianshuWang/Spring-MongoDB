@@ -1,5 +1,6 @@
 package com.tianshu.domain;
 
+import io.swagger.annotations.ApiModel;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

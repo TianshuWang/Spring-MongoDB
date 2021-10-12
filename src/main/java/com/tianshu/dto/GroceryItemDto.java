@@ -1,20 +1,27 @@
 package com.tianshu.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+@ApiModel(description = "All details about the Grocery Item for Request")
 public class GroceryItemDto {
 
     @NotBlank
     private String id;
 
     @NotBlank
+    @ApiModelProperty(value = "Name of the Grocery Item",name = "name", dataType = "String", notes = "Allow Not Blank")
     private String name;
 
     @NotNull
+    @ApiModelProperty(value = "Stock of the Grocery Item",name = "quantity", dataType = "int", notes = "Allow Not Null")
     private int quantity;
 
     @NotBlank
+    @ApiModelProperty(value = "Category of the Grocery Item",name = "category", dataType = "String", notes = "Allow Not Blank")
     private String category;
 
     public GroceryItemDto(String id, String name, int quantity, String category) {

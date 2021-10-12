@@ -33,7 +33,7 @@ public class GroceryItemController {
 
     @GetMapping("/category/{category}")
     @ResponseStatus(code = HttpStatus.OK)
-    public List<GroceryItemDto> detailAll(@PathVariable String category) throws GroceryItemsNotFoundByCategoryException {
+    public List<GroceryItemDto> detailAllGroceryItems(@PathVariable String category) throws GroceryItemsNotFoundByCategoryException {
         return groceryItemService.findAllByCategory(category);
     }
 
