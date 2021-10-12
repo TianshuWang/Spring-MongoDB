@@ -6,22 +6,23 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-@ApiModel(description = "All details about the Grocery Item for Request")
+@ApiModel(description = "All details about the Grocery Item")
 public class GroceryItemDto {
 
     @NotBlank
+    @ApiModelProperty(value = "Id of the Grocery Item",name = "id", dataType = "String",required = true)
     private String id;
 
     @NotBlank
-    @ApiModelProperty(value = "Name of the Grocery Item",name = "name", dataType = "String", notes = "Allow Not Blank")
+    @ApiModelProperty(value = "Name of the Grocery Item",name = "name", dataType = "String",required = true)
     private String name;
 
     @NotNull
-    @ApiModelProperty(value = "Stock of the Grocery Item",name = "quantity", dataType = "int", notes = "Allow Not Null")
+    @ApiModelProperty(value = "Stock of the Grocery Item",name = "quantity", dataType = "int", required = true)
     private int quantity;
 
     @NotBlank
-    @ApiModelProperty(value = "Category of the Grocery Item",name = "category", dataType = "String", notes = "Allow Not Blank")
+    @ApiModelProperty(value = "Category of the Grocery Item",name = "category", dataType = "String", required = true)
     private String category;
 
     public GroceryItemDto(String id, String name, int quantity, String category) {

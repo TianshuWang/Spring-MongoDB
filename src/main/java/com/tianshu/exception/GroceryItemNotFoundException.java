@@ -1,6 +1,6 @@
 package com.tianshu.exception;
 
-public class GroceryItemNotFoundException extends Throwable {
+public class GroceryItemNotFoundException extends RuntimeException {
     public GroceryItemNotFoundException(String s) {
         super(s);
     }
